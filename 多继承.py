@@ -40,8 +40,17 @@ class Gamer(Royal, Witch):
             card = Witch.card(self)
         print(f"{mode}, {card}, 然后{self.game_result}")
 
+#  创建一个函数start(),它接受具有mode()和card()方法的对象
+def start(obj):
+    obj.mode()
+    obj.card()
+
 
 bb = Gamer("王桑","赢了", style = "Witch")
 laosi = Gamer("四哥", "输了", style = "Royal")
 bb.szb()
 laosi.szb()
+
+print("使用strat函数呼出具有相同方法的对象")
+start(Witch("王桑",""))
+start(Royal("四哥"))
